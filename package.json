@@ -10,8 +10,7 @@
     "packages/coding-agent/examples/extensions/sandbox"
   ],
   "scripts": {
-    "build": "node canary.js && tsc",
-    "prepare": "node canary.js"
+    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
   },
   "devDependencies": {
     "@anthropic-ai/sandbox-runtime": "^0.0.55",
